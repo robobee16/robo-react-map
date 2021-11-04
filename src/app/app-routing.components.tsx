@@ -1,42 +1,22 @@
 import React, { memo } from "react";
 import { Route } from "react-router-dom";
 import { Routing } from "@interfaces/interfaces";
-import { PolicyComponent } from "@components/policy/policy.component";
-import { PolicyMh } from "@components/policy/game-list/pocket-guide-mh";
-import { PolicyPoOT } from "@components/policy/game-list/poot";
-import { PolicyFoMT } from "@components/policy/game-list/fomt";
-import { PolicyDoraemon } from "@components/policy/game-list/doraemon";
-import { PolicyPocketGuide } from "@components/policy/game-list/pocket-guide";
-import { PolicyStardew } from "@components/policy/game-list/stardew";
+import { PageComponent } from "@components/page/page.component";
+import { Page1Component } from "@components/page/page1.component";
+import { Page2Component } from "@components/page/page2.component";
 
 export const Routes: Routing[] = [
   {
-    path: "/policy",
-    component: PolicyComponent,
+    path: "/page",
+    component: PageComponent,
     routes: [
       {
-        path: "/policy/poot",
-        component: PolicyPoOT,
+        path: "/page/1",
+        component: Page1Component,
       },
       {
-        path: "/policy/fomt",
-        component: PolicyFoMT,
-      },
-      {
-        path: "/policy/dor",
-        component: PolicyDoraemon,
-      },
-      {
-        path: "/policy/pocket-guide",
-        component: PolicyPocketGuide,
-      },
-      {
-        path: "/policy/stardew",
-        component: PolicyStardew,
-      },
-      {
-        path: "/policy/pocket-guide-mh",
-        component: PolicyMh,
+        path: "/page/2",
+        component: Page2Component,
       },
     ],
   },

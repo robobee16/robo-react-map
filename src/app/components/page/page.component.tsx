@@ -9,7 +9,7 @@ interface Props {
 
 export interface Ref {}
 
-export const PolicyComponent = memo(
+export const PageComponent = memo(
   forwardRef<Ref, Props>((props, ref) => {
     return (
       <>
